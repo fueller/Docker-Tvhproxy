@@ -24,7 +24,7 @@ RUN apk add --no-cache \
 
 # Install tvhproxy
     mkdir -p /opt/mosaicproxy && \
-    wget -qO /opt/mosaicproxy/mosaicProxy.py "https://raw.githubusercontent.com/jkaberg/tvhProxy/master/tvhProxy.py" && \
+    wget -qO /opt/mosaicproxy/mosaicProxy.py "https://raw.githubusercontent.com/fueller/Docker-mosaicProxy/master/mosaicProxy.py" && \
 
 # Cleanup
     apk del --purge build-dependencies && \
