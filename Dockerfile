@@ -23,14 +23,14 @@ RUN apk add --no-cache \
         py-gevent && \
 
 # Install tvhproxy
-    mkdir -p /opt/tvhproxy && \
-    wget -qO /opt/tvhproxy/tvhProxy.py "https://raw.githubusercontent.com/jkaberg/tvhProxy/master/tvhProxy.py" && \
+    mkdir -p /opt/mosaicproxy && \
+    wget -qO /opt/mosaicproxy/mosaicProxy.py "https://raw.githubusercontent.com/jkaberg/tvhProxy/master/tvhProxy.py" && \
 
 # Cleanup
     apk del --purge build-dependencies && \
     rm -rf /var/cache/apk/* /tmp/* && \
 
 # Set file permissions
-    chmod +x /docker-entrypoint.sh /opt/tvhproxy/tvhProxy.py
+    chmod +x /docker-entrypoint.sh /opt/mosaicproxy/mosaicProxy.py
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
